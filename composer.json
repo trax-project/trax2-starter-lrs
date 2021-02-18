@@ -1,9 +1,9 @@
 {
     "name": "trax2/starter-lrs",
     "type": "project",
-    "description": "TRAX LRS. Extended Edition.",
+    "description": "TRAX LRS. Starter Edition.",
     "keywords": ["trax", "lrs", "xapi"],
-    "license": "MIT",
+    "license": "GPL-3.0-or-later",
     "require": {
         "php": "^7.3|^8.0",
         "fideloper/proxy": "^4.4",
