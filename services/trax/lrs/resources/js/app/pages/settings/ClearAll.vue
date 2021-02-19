@@ -49,8 +49,8 @@
                 this.modals.open('confirmClearAll').then(resp => {
                     if (resp.confirmed) {
                         this.deleting = true
-                        axios.delete(
-                            '/trax/api/front/xapi/ext/stores',
+                        axios.post(
+                            '/trax/api/front/xapi/ext/stores/clear',
                         )
                             .then(response => {
                                 this.deleting = false
