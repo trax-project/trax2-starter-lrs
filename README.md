@@ -58,7 +58,7 @@ Check that your PHP version and configuration is valid both for PHP Web & CLI.
 Assuming that you want to install TRAX LRS in a folder named **traxlrs**:
 
 ```
-git clone --recursive --branch beta1 https://github.com/trax-project/trax2-starter-lrs traxlrs
+git clone --recursive --branch beta2 https://github.com/trax-project/trax2-starter-lrs traxlrs
 cd traxlrs
 composer install
 ```
@@ -155,7 +155,7 @@ If you already installed TRAX LRS Starter Edition,
 you can get the last minor updates with the following commands:
 
 ```
-git pull origin beta1
+git pull origin beta2
 git submodule update
 composer dumpautoload
 ```
