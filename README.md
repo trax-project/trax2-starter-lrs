@@ -106,24 +106,6 @@ DB_USERNAME=postgres
 DB_PASSWORD=aaaaaa
 ```
 
-### Environment
-
-In the `.env` file, you can set the current environment, as well as a debugging option.
-
-*For testing and development:*
-
-```ini
-APP_ENV=local
-APP_DEBUG=true
-```
-
-*For production:*
-
-```ini
-APP_ENV=production
-APP_DEBUG=false
-```
-
 ### Last Steps
 
 ```
@@ -139,6 +121,31 @@ This will give your credentials to log into the application.
 
 ```
 php artisan admin:create
+```
+
+
+## Production server
+
+In the `.env` file, changes settings from:
+
+```ini
+APP_ENV=local
+APP_DEBUG=true
+```
+
+To:
+
+```ini
+APP_ENV=production
+APP_DEBUG=false
+```
+
+Then, run the following commands:
+
+```powershell
+composer install --optimize-autoloader --no-dev
+php artisan config:cache
+php artisan route:cache
 ```
 
 
