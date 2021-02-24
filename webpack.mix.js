@@ -4,6 +4,7 @@ const path = require('path');
 mix.webpackConfig({
    resolve: {
       alias: {
+         '@': path.resolve(__dirname, 'resources/js'),
          '@tim': path.resolve(__dirname, 'services/tim'),
          '@trax': path.resolve(__dirname, 'services/trax/framework/front'),
          '@lrs': path.resolve(__dirname, 'services/trax/lrs/resources'),
