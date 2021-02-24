@@ -10,7 +10,7 @@
     <script src="{{ url('/') . mix('js/lrs.js') }}" defer></script>
     
     <!-- Styles -->
-    <link href="{{ asset('css/lrs.css') }}" rel="stylesheet">
+    <link href="{{ url('/') . mix('css/lrs.css') }}" rel="stylesheet">
     <link href="{{ asset('css/plugins/highlightjs.min.css') }}" rel="stylesheet">
 
     <!-- Fonts and icons -->
