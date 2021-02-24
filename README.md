@@ -123,6 +123,14 @@ This will give your credentials to log into the application.
 php artisan admin:create
 ```
 
+Additional commands are available to manage the admin accounts:
+
+```powershell
+php artisan admin:list
+php artisan admin:update
+php artisan admin:delete
+```
+
 
 ## Production server
 
