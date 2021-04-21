@@ -87,7 +87,7 @@
             </div>
             
             <div v-else>
-                <p class="text-center pt-3">{{ $t('xapi.statements.search.no-result') }}</p>
+                <p class="text-center pt-3">{{ $t('xapi.common.search.no-result') }}</p>
             </div>
 
         </div>
