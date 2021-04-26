@@ -1,4 +1,4 @@
-# TRAX LRS 2.0 - Starter Edition (beta 2)
+# TRAX LRS 2.0 - Starter Edition (beta 3)
 
 
 ## About TRAX LRS
@@ -17,6 +17,11 @@ Fore further information, visit http://traxlrs.com
 TRAX LRS **Starter Edition** is distributed under the [GNU-GPL3 license](https://www.gnu.org/licenses/gpl-3.0.fr.html).
 
 Copyright 2021 Sébastien Fraysse, http://fraysse.eu, sebastien@fraysse.eu.
+
+
+## Upgrade from previous versions
+
+With TRAX LRS 2.0 Beta 3, we made some changes in the database schema and there is no upgrade migration. So you must install a fresh database to start using TRAX LRS Beta 3.
 
 
 ## Server Requirements
@@ -58,7 +63,7 @@ Check that your PHP version and configuration is valid both for PHP Web & CLI.
 Assuming that you want to install TRAX LRS in a folder named **traxlrs**:
 
 ```
-git clone --recursive --branch beta2 https://github.com/trax-project/trax2-starter-lrs traxlrs
+git clone --recursive --branch beta3 https://github.com/trax-project/trax2-starter-lrs traxlrs
 cd traxlrs
 composer install
 ```
@@ -159,11 +164,10 @@ php artisan route:cache
 
 ## Updates
 
-If you already installed TRAX LRS Starter Edition,
-you can get the last minor updates with the following commands:
+You can get the last minor updates with the following commands:
 
 ```
-git pull origin beta2
+git pull origin beta3
 git submodule update
 composer dumpautoload
 ```
