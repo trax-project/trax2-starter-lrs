@@ -30,7 +30,7 @@ With TRAX LRS 2.0 Beta 3, we made some changes in the database schema and there 
 
 - mod_rewrite
 
-### PHP 7.2.5 to 8.0
+### PHP 7.4 to 8.0
 
 Check that your PHP version and configuration is valid both for PHP Web & CLI.
 
