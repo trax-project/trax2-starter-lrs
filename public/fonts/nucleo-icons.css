@@ -257,3 +257,31 @@ Generated using nucleoapp.com
 .icon-quote::before {
   content: "\ea50";
 }
+
+.icon-badge-13::before {
+  content: "\ea51";
+}
+
+.icon-mail::before {
+  content: "\ea52";
+}
+
+.icon-book-39::before {
+  content: "\ea56";
+}
+
+.icon-drag-31::before {
+  content: "\ea57";
+}
+
+.icon-media-player::before {
+  content: "\ea58";
+}
+
+.icon-line-chart::before {
+  content: "\ea59";
+}
+
+.icon-book-bookmark::before {
+  content: "\ea5a";
+}
