@@ -153,13 +153,23 @@ APP_ENV=production
 APP_DEBUG=false
 ```
 
-Then, run the following commands:
+When your application runs on HTTP, it includes assets (css, fonts, etc.) with an absolute URL starting by `http://`.
+If you want to serve your application via an HTTPS proxy, you can force the application to use the `https://` prefix
+for all the assets with the following option:
+
+```ini
+APP_SECURE=true
+```
+
+To optimize performances, you can run the following commands.
 
 ```powershell
 composer install --optimize-autoloader --no-dev
 php artisan config:cache
 php artisan route:cache
 ```
+
+The `php artisan config:cache` command must be run again after each config change.
 
 
 ## Updates

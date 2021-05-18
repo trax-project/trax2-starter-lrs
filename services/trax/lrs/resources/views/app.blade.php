@@ -4,23 +4,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
-    <meta name="base-url" content="{{ url('/') }}">
+    <meta name="base-url" content="{{ traxUrl('/') }}">
     
     <!-- Scripts -->
-    <script src="{{ url('/') . mix('js/lrs.js') }}" defer></script>
+    <script src="{{ traxUrl('/') . mix('js/lrs.js') }}" defer></script>
     
     <!-- Styles -->
-    <link href="{{ url('/') . mix('css/lrs.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/plugins/highlightjs.min.css') }}" rel="stylesheet">
+    <link href="{{ traxUrl('/') . mix('css/lrs.css') }}" rel="stylesheet">
+    <link href="{{ traxAsset('css/plugins/highlightjs.min.css') }}" rel="stylesheet">
 
     <!-- Fonts and icons -->
-    <link href="{{ asset('fonts/poppins-font.css') }}" rel="stylesheet">
-    <link href="{{ asset('fonts/font-awesome.css') }}" rel="stylesheet">
-    <link href="{{ asset('fonts/nucleo-icons.css') }}" rel="stylesheet" />
+    <link href="{{ traxAsset('fonts/poppins-font.css') }}" rel="stylesheet">
+    <link href="{{ traxAsset('fonts/font-awesome.css') }}" rel="stylesheet">
+    <link href="{{ traxAsset('fonts/nucleo-icons.css') }}" rel="stylesheet" />
 
     <!-- Brand -->
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('img/apple-icon.png') }}">
-    <link rel="icon" type="image/png" href="{{ asset('img/favicon.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ traxAsset('img/apple-icon.png') }}">
+    <link rel="icon" type="image/png" href="{{ traxAsset('img/favicon.png') }}">
     <title>
         TRAX LRS• The Progressive LRS
     </title>

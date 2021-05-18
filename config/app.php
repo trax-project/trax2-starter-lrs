@@ -241,4 +241,8 @@ return [
         'TraxAuth' => Trax\Auth\TraxAuth::class,
     ],
 
+    /*
+     * TRAX...
+     */
+    'secure' => env('APP_SECURE', null),
 ];
