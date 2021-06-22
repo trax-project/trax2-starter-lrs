@@ -21,7 +21,7 @@ Copyright 2021 Sébastien Fraysse, http://fraysse.eu, sebastien@fraysse.eu.
 
 ## Upgrade from previous versions
 
-With TRAX LRS 2.0 Beta 3, we made some changes in the database schema and there is no upgrade migration. So you must install a fresh database to start using TRAX LRS Beta 3.
+With Beta 4, we made some changes in the database schema and there is no migration for this upgrade. So you must install a fresh database to start using Beta 4+.
 
 
 ## Server Requirements
@@ -82,6 +82,7 @@ chmod -R 777 storage
 
 For security reasons, only the `public` folder should be accessible by the web server.
 Create a virtual host and configure the document root to `traxlrs/public`.
+
 
 ### Database
 
