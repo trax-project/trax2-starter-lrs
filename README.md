@@ -1,4 +1,4 @@
-# TRAX LRS 2.0 - Starter Edition (beta 3)
+# TRAX LRS 2.0 - Starter Edition (beta 4)
 
 
 ## About TRAX LRS
@@ -48,7 +48,7 @@ Check that your PHP version and configuration is valid both for PHP Web & CLI.
 
 - MySQL: 5.7 or 8.0
 - MariaDB: 10.3 or 10.4
-- PostgreSQL: 12
+- PostgreSQL: 12 or 13
 
 ### Utilities
 
@@ -63,7 +63,7 @@ Check that your PHP version and configuration is valid both for PHP Web & CLI.
 Assuming that you want to install TRAX LRS in a folder named **traxlrs**:
 
 ```
-git clone --recursive --branch beta3 https://github.com/trax-project/trax2-starter-lrs traxlrs
+git clone --recursive --branch beta4 https://github.com/trax-project/trax2-starter-lrs traxlrs
 cd traxlrs
 composer install
 ```
@@ -177,7 +177,7 @@ The `php artisan config:cache` command must be run again after each config chang
 You can get the last minor updates with the following commands:
 
 ```
-git pull origin beta3
+git pull origin beta4
 git submodule update
 composer dumpautoload
 ```
