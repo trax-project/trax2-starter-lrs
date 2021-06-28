@@ -238,6 +238,7 @@ return [
         /*
          * TRAX...
          */
+        'TraxRouting' => Trax\Auth\TraxRouting::class,
         'TraxAuth' => Trax\Auth\TraxAuth::class,
     ],
 
