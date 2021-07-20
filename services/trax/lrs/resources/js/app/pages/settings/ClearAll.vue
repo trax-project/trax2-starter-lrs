@@ -52,13 +52,14 @@
                         axios.post(
                             '/trax/api/front/xapi/ext/stores/clear',
                         )
-                            .then(response => {
-                                this.deleting = false
-                            })
-                            .catch(error => {
-                                this.deleting = false
-                                this.error = true
-                            });
+                        .then(response => {
+                            this.deleting = false
+                        })
+                        .catch(error => {
+                            this.deleting = false
+                            this.error = true
+                            this.$auth.handleErrorVm(error, this)
+                        })
                     }
                 })
             }

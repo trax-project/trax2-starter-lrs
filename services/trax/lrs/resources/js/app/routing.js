@@ -10,6 +10,8 @@ import StatementsPage from './pages/StatementsPage.vue';
 import ClientsPage from './pages/ClientsPage.vue';
 import SettingsPage from './pages/SettingsPage.vue';
 import NotFoundPage from './pages/NotFoundPage.vue';
+import MaintenancePage from './pages/MaintenancePage.vue';
+import ErrorPage from './pages/ErrorPage.vue';
 
 
 function getRoutes(auth) {
@@ -48,6 +50,22 @@ function getRoutes(auth) {
                     name: "settings",
                     beforeEnter: auth.ifAuthenticated,
                     component: SettingsPage
+                },
+            ]
+        },
+        {
+            path: "/lrs",
+            component: FullPageLayout,
+            children: [
+                {
+                    path: "maintenance",
+                    name: "maintenance",
+                    component: MaintenancePage,
+                },
+                {
+                    path: "error",
+                    name: "error",
+                    component: ErrorPage,
                 },
                 {
                     path: "*",

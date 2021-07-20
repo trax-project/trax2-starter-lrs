@@ -1,6 +1,6 @@
 <template>
     <centered brand links>
-        <login-card redirect-route-name="home"></login-card>
+        <login-card></login-card>
     </centered>
 </template>
 

@@ -42,10 +42,6 @@
                 type: String,
                 default: '/trax/api/auth/login'
             },
-            redirectRouteName: {
-                type: String,
-                required: true
-            }
         },
 
         data() {
@@ -64,10 +60,26 @@
                 axios.post(this.endpoint, this.form)
                     .then(resp => {
                         this.$topbar.hide();
-                        this.$router.push({ name: this.redirectRouteName });
+                        let target = this.$auth.redirect() ? this.$auth.redirect() : { name: 'home' }
+                        this.$router.push(target)
+                        .catch(err => {
+                            // This may happen when we need to do something before accessing to the home page.
+                            // And this is normal. Nothing to do.
+                        })
                     })
                     .catch(err => {
-                        this.error = this.$t('auth.login-error');
+                        switch(err.response.status) {
+                            case 503:
+                                this.$router.push({ name: 'maintenance' })
+                                break
+                            case 401:
+                            case 422:
+                                this.error = this.$t('auth.login-error')
+                                break
+                            default:
+                                this.error = this.$t('auth.login-unknown-error')
+                                break;
+                        }
                     });
             }
         }
