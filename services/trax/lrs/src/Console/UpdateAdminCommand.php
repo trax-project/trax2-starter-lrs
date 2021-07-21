@@ -39,7 +39,7 @@ class UpdateAdminCommand extends AdminCommand
         $data = [
             'email' => $email,
             'username' => $email,
-            'password' => $this->ask('Password', ''),
+            'password' => $this->askUserPassword(),
         ];
 
         if (empty($data['password'])) {

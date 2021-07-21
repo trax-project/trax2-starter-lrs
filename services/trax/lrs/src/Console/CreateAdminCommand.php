@@ -31,7 +31,7 @@ class CreateAdminCommand extends AdminCommand
             'username' => $email,
             'firstname' => 'Unknown',
             'lastname' => 'Unknown',
-            'password' => $this->ask('Password', \Str::random(8)),
+            'password' => $this->askUserPassword(true),
             'admin' => true,
         ];
     

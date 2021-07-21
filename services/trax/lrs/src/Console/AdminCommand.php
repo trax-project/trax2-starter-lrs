@@ -6,6 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
 use Trax\Auth\Stores\Users\UserRepository;
 use Trax\Auth\Stores\Users\User;
+use Trax\Auth\Password;
 
 class AdminCommand extends Command
 {
@@ -44,6 +45,29 @@ class AdminCommand extends Command
             return false;
         }
         return $user;
+    }
+
+    /**
+     * Prompt the user password.
+     *
+     * @param  bool  $required
+     * @return string
+     */
+    protected function askUserPassword(bool $required = false)
+    {
+        $default = $required ? Password::random() : '';
+        while (1) {
+            $password = $this->ask('Password', $default);
+            if (!$required && empty($password)) {
+                break;
+            }
+            if (Password::validate($password)) {
+                break;
+            }
+            $this->error('This password does not comply with the password security rules.');
+            $this->info(Password::notice($password));
+        }
+        return $password;
     }
 
     /**
