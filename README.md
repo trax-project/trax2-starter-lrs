@@ -1,4 +1,4 @@
-# TRAX LRS 2.0 - Starter Edition (beta 4)
+# TRAX LRS 2.0 - Starter Edition (beta 5)
 
 
 ## About TRAX LRS
@@ -17,11 +17,6 @@ Fore further information, visit http://traxlrs.com
 TRAX LRS **Starter Edition** is distributed under the [GNU-GPL3 license](https://www.gnu.org/licenses/gpl-3.0.fr.html).
 
 Copyright 2021 Sébastien Fraysse, http://fraysse.eu, sebastien@fraysse.eu.
-
-
-## Upgrade from previous versions
-
-With Beta 4, we made some changes in the database schema and there is no migration for this upgrade. So you must install a fresh database to start using Beta 4+.
 
 
 ## Server Requirements
@@ -56,14 +51,27 @@ Check that your PHP version and configuration is valid both for PHP Web & CLI.
 - Composer 2
 
 
-## Installation
+
+## Upgrade from previous versions
+
+### From beta4
+
+You can keep your beta4 database with TRAX LRS beta5. Install the beta5 application, set the right database settings, then run `php artisan migrate`
+to apply the migration from beta4 to beta5. Of course, this is your responsability to make all the necessary backups before any upgrade.
+
+### From older versions
+
+The database schema has changed with TRAX LRS beta4 and there is no related migration. So we recommend installing a fresh application with a fresh database.
+
+
+## Fresh install
 
 ### First Steps
 
 Assuming that you want to install TRAX LRS in a folder named **traxlrs**:
 
 ```
-git clone --recursive --branch beta4 https://github.com/trax-project/trax2-starter-lrs traxlrs
+git clone --recursive --branch beta5 https://github.com/trax-project/trax2-starter-lrs traxlrs
 cd traxlrs
 composer install
 ```
@@ -178,7 +186,7 @@ The `php artisan config:cache` command must be run again after each config chang
 You can get the last minor updates with the following commands:
 
 ```
-git pull origin beta4
+git pull origin beta5
 git submodule update
 composer dumpautoload
 ```
