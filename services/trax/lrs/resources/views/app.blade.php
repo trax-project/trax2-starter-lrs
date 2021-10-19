@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
-    <meta name="base-url" content="{{ traxUrl('/') }}">
+    <meta name="base-url" content="{{ traxUrl() }}">
     
     <!-- Scripts -->
-    <script src="{{ traxUrl('/') . mix('js/lrs.js') }}" defer></script>
+    <script src="{{ traxUrl() . mix('js/lrs.js') }}" defer></script>
     
     <!-- Styles -->
-    <link href="{{ traxUrl('/') . mix('css/lrs.css') }}" rel="stylesheet">
+    <link href="{{ traxUrl() . mix('css/lrs.css') }}" rel="stylesheet">
     <link href="{{ traxAsset('css/plugins/highlightjs.min.css') }}" rel="stylesheet">
 
     <!-- Fonts and icons -->

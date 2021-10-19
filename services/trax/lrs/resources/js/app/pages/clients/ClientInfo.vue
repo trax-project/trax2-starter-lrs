@@ -15,7 +15,7 @@
                 {{ $t('common.endpoint') }}
             </div>
             <div class="col-md-10">
-                {{ info.endpoint }}/
+                {{ info.endpoint }}
             </div>
         </div>
 

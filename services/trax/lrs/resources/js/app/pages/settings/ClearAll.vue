@@ -50,7 +50,7 @@
                     if (resp.confirmed) {
                         this.deleting = true
                         axios.post(
-                            '/trax/api/front/xapi/ext/stores/clear',
+                            '/trax/api/front/xapi/ext/stores/1/clear',
                         )
                         .then(response => {
                             this.deleting = false
