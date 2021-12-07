@@ -10,6 +10,8 @@ Vue.use(require('@trax/plugins/XapiClient').default);       // $xapi
 
 // Global vars.
 Vue.prototype.$baseURL = window.baseURL
+Vue.prototype.$appEnv = window.appEnv
+Vue.prototype.$appVersion = window.appVersion
 
 // Vue instance.
 import routing from './routing'

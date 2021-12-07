@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
     <meta name="base-url" content="{{ traxUrl() }}">
-    
+    <meta name="app-env" content="{{ config('app.env') }}">
+    <meta name="app-version" content="{{ config('trax-lrs.version') }}">
+
     <!-- Scripts -->
     <script src="{{ traxUrl() . mix('js/lrs.js') }}" defer></script>
     

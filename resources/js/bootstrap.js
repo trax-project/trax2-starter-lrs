@@ -24,6 +24,8 @@ window.axios = require('axios');
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 window.baseURL = document.head.querySelector('meta[name="base-url"]').content;
+window.appEnv = document.head.querySelector('meta[name="app-env"]').content;
+window.appVersion = document.head.querySelector('meta[name="app-version"]').content;
 window.axios.defaults.baseURL = window.baseURL;
 
 /**
