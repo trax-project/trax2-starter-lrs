@@ -122,6 +122,14 @@ DB_USERNAME=postgres
 DB_PASSWORD=aaaaaa
 ```
 
+### App URL
+
+In the `.env` file, you must set the public URL of your TRAX LRS application :
+
+```ini
+APP_URL=http://traxlrs.test
+```
+
 ### Last Steps
 
 ```
@@ -164,14 +172,6 @@ APP_ENV=production
 APP_DEBUG=false
 ```
 
-When your application runs on HTTP, it includes assets (css, fonts, etc.) with an absolute URL starting by `http://`.
-If you want to serve your application via an HTTPS proxy, you can force the application to use the `https://` prefix
-for all the assets with the following option:
-
-```ini
-APP_SECURE=true
-```
-
 To optimize performances, you can run the following commands.
 
 ```powershell
@@ -180,10 +180,10 @@ php artisan config:cache
 php artisan route:cache
 ```
 
-The `php artisan config:cache` command must be run again after each config change.
+The `php artisan config:cache` command must be ran again after each config change.
 
 
-## Updates
+## Minor updates
 
 You can get the last minor updates with the following commands:
 
