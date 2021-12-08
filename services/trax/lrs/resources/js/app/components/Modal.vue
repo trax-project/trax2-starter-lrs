@@ -93,6 +93,7 @@
     /*
     Styling options
     ===============
+    Class 'primary' for pink background (default is black)
     Class 'white' for white background (default is black)
     Class 'center' to center the title, content and buttons
     Class 'short' for short content (Y translation)
@@ -169,6 +170,12 @@
     }
     .modal.white .modal-header .close:hover > span {
         color: #222a42;
+    }
+
+    /* pink */
+
+    .modal.primary .modal-content {
+        background-color: #e14eca;
     }
 
     /* fullscreen */
