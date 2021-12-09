@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7fa65ac6aef7caa0035b3faff24b91ff",
+    "content-hash": "531060c465b092243c3b2fb15268873c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5220,6 +5220,54 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/2.2.4"
             },
             "time": "2021-12-08T09:12:39+00:00"
+        },
+        {
+            "name": "trax2/framework",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/trax-project/trax2-framework.git",
+                "reference": "f88627eb18612b8f3f083fdfffeca55b6116b2a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/trax-project/trax2-framework/zipball/f88627eb18612b8f3f083fdfffeca55b6116b2a1",
+                "reference": "f88627eb18612b8f3f083fdfffeca55b6116b2a1",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Trax\\Auth\\": "auth/src/",
+                    "Trax\\Core\\": "core/src/",
+                    "Trax\\Repo\\": "repo/src/",
+                    "Trax\\XapiStore\\": "xapi-store/src/",
+                    "Trax\\XapiValidation\\": "xapi-validation/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Sébastien Fraysse",
+                    "email": "sebastien@fraysse.eu",
+                    "homepage": "http://fraysse.eu"
+                }
+            ],
+            "description": "A framework for TRAX LRS",
+            "homepage": "http://traxlrs.com",
+            "keywords": [
+                "lrs",
+                "trax",
+                "xAPI"
+            ],
+            "support": {
+                "issues": "https://github.com/trax-project/trax2-framework/issues",
+                "source": "https://github.com/trax-project/trax2-framework/tree/2.0.0"
+            },
+            "time": "2021-12-09T13:58:41+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

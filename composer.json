@@ -11,7 +11,8 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
-        "laravel/ui": "^3.2"
+        "laravel/ui": "^3.2",
+        "trax2/framework": "2.0.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -34,19 +35,11 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Trax\\Auth\\": "services/trax/framework/auth/src/",
-            "Trax\\Core\\": "services/trax/framework/core/src/",
-            "Trax\\Repo\\": "services/trax/framework/repo/src/",
-            "Trax\\XapiStore\\": "services/trax/framework/xapi-store/src/",
-            "Trax\\XapiValidation\\": "services/trax/framework/xapi-validation/src/",
-            "Trax\\Lrs\\": "services/trax/lrs/src/",
-            "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "Trax\\Lrs\\": "services/trax/lrs/src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
         }
     },
     "minimum-stability": "dev",
