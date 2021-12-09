@@ -5227,12 +5227,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/trax-project/trax2-framework.git",
-                "reference": "f88627eb18612b8f3f083fdfffeca55b6116b2a1"
+                "reference": "499ccd703b35e06df9951ef0d78e7ec8e4545b09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/trax-project/trax2-framework/zipball/f88627eb18612b8f3f083fdfffeca55b6116b2a1",
-                "reference": "f88627eb18612b8f3f083fdfffeca55b6116b2a1",
+                "url": "https://api.github.com/repos/trax-project/trax2-framework/zipball/499ccd703b35e06df9951ef0d78e7ec8e4545b09",
+                "reference": "499ccd703b35e06df9951ef0d78e7ec8e4545b09",
                 "shasum": ""
             },
             "type": "library",
@@ -5267,7 +5267,7 @@
                 "issues": "https://github.com/trax-project/trax2-framework/issues",
                 "source": "https://github.com/trax-project/trax2-framework/tree/2.0.0"
             },
-            "time": "2021-12-09T13:58:41+00:00"
+            "time": "2021-12-09T22:01:32+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
