@@ -1,3 +1,0 @@
-[submodule "services/trax/framework"]
-	path = services/trax/framework
-	url = https://github.com/trax-project/trax2-framework.git
