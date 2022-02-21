@@ -1,4 +1,4 @@
-# TRAX LRS 2.0 - Starter Edition
+# TRAX LRS 2.0.1 - Starter Edition
 
 
 ## About TRAX LRS
@@ -16,7 +16,7 @@ Fore further information, visit http://traxlrs.com
 
 TRAX LRS **Starter Edition** is distributed under the [GNU-GPL3 license](https://www.gnu.org/licenses/gpl-3.0.fr.html).
 
-Copyright 2021 Sébastien Fraysse, http://fraysse.eu, sebastien@fraysse.eu.
+Copyright 2022 Sébastien Fraysse, http://fraysse.eu, sebastien@fraysse.eu.
 
 
 ## Server Requirements
@@ -66,8 +66,12 @@ composer install
 
 ### File Permissions
 
-Folders `storage` and `bootstrap/cache` require write access by the web server.
-If you are not sure how to configure this, you can use the following commands **for testing purpose**.
+The folders `storage` and `bootstrap/cache` must be writable both by the webserver and the console user.
+Assuming that the ownership has been properly set, you should be able to assign a `0775` permission
+to the folders and subfolders and a `644` permission to the files.
+Check this post for further details: https://laracasts.com/discuss/channels/laravel/proper-folder-permissions
+
+If you are not sure how to configure this, you can use the following commands **FOR TESTING PURPOSE**.
 
 ```
 chmod -R 777 bootstrap/cache
