@@ -51,6 +51,21 @@ Check that your PHP version and configuration is valid both for PHP Web & CLI.
 - Composer 2
 
 
+## Upgrade
+
+### From TRAX LRS 2.0.x
+
+In order to upgrade TRAX LRS from version 2.0.x, you need to install the last release of TRAX LRS
+with a copy the `.env` file from your previous installation.
+The database is not affected by minor upgrades.
+
+### From previous versions
+
+Upgrading from versions older than 2.0.0 is not directly supported.
+However, you can install TRAX LRS 2.0.x Extended Edition as a new LRS
+and then migrate your xAPI statements with the
+[LRS connector](https://extended.traxlrs.com/docs/2.0/lrs).
+
 
 ## Fresh install
 
@@ -71,7 +86,7 @@ Assuming that the ownership has been properly set, you should be able to assign 
 to the folders and subfolders and a `644` permission to the files.
 Check this post for further details: https://laracasts.com/discuss/channels/laravel/proper-folder-permissions
 
-If you are not sure how to configure this, you can use the following commands **FOR TESTING PURPOSE**.
+If you are not sure how to configure this, you can use the following commands **FOR TESTING PURPOSE ONLY**.
 
 ```
 chmod -R 777 bootstrap/cache

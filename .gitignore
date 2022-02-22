@@ -1,5 +1,7 @@
 /node_modules
+/public/storage
 /services/tim
+/services/trax/framework
 /vendor
 .env
 .env.testing
