@@ -1,4 +1,4 @@
-# TRAX LRS 2.0.1 - Starter Edition
+# TRAX LRS 2.0.2 - Starter Edition
 
 
 ## About TRAX LRS
@@ -57,13 +57,13 @@ Check that your PHP version and configuration is valid both for PHP Web & CLI.
 
 In order to upgrade TRAX LRS from version 2.0.x, you need to install the last release of TRAX LRS
 with a copy the `.env` file from your previous installation.
-The database is not affected by minor upgrades.
+
+The database schema must then be updated with the `php artisan migrate` command.
 
 ### From previous versions
 
 Upgrading from versions older than 2.0.0 is not directly supported.
-However, you can install TRAX LRS 2.0.x Extended Edition as a new LRS
-and then migrate your xAPI statements with the
+However, you can install TRAX LRS 2.0.x as a new LRS and then migrate your xAPI statements with the
 [LRS connector](https://extended.traxlrs.com/docs/2.0/lrs).
 
 
@@ -186,4 +186,20 @@ php artisan route:cache
 ```
 
 The `php artisan config:cache` command must be ran again after each config change.
+
+
+
+## Known issues
+
+### 404 error on the main page
+
+TRAX LRS has a `/public/.htaccess` file with some Apache directives.
+When these directives are ignored by Apache, this leads to a 404 error.
+In this case, check the `httpd.conf` file of Apache and try to set the `AllowOverride` option to `All`:
+
+```xml
+<Directory "path/to/laravel/project/public">
+    Allowoverride All
+</Directory>
+```
 
