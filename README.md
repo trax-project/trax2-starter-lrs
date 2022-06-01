@@ -41,7 +41,7 @@ Check that your PHP version and configuration is valid both for PHP Web & CLI.
 
 ### Database
 
-- MySQL: 5.7 or 8.0
+- MySQL: 5.7.7 or 8.0
 - MariaDB: 10.3 or 10.4
 - PostgreSQL: 12 or 13
 
@@ -190,6 +190,12 @@ The `php artisan config:cache` command must be ran again after each config chang
 
 
 ## Known issues
+
+### SQLSTATE[42000]: Syntax error or access violation: 1071
+
+If you get this error during the `php artisan migrate` command, check your version of MySQL or MariaDB.
+Since TRAX LRS 2.0.2, MySQL versions older than 5.7.7 are not supported anymore.
+MariaDB versions older than 10.3 are not supported.
 
 ### 404 error on the main page
 

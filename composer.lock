@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e90891436d3a37dee3d9e9806461576",
+    "content-hash": "99867f7347540c7d56f54ec8a5485d0a",
     "packages": [
         {
             "name": "brick/math",
@@ -5247,16 +5247,16 @@
         },
         {
             "name": "trax2/framework",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/trax-project/trax2-framework.git",
-                "reference": "982251513bfbecb9b95087423ef9eb0f0f6aba9e"
+                "reference": "da5af2be04aa73b347cc8af2ceef370e64b3447b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/trax-project/trax2-framework/zipball/982251513bfbecb9b95087423ef9eb0f0f6aba9e",
-                "reference": "982251513bfbecb9b95087423ef9eb0f0f6aba9e",
+                "url": "https://api.github.com/repos/trax-project/trax2-framework/zipball/da5af2be04aa73b347cc8af2ceef370e64b3447b",
+                "reference": "da5af2be04aa73b347cc8af2ceef370e64b3447b",
                 "shasum": ""
             },
             "type": "library",
@@ -5289,9 +5289,9 @@
             ],
             "support": {
                 "issues": "https://github.com/trax-project/trax2-framework/issues",
-                "source": "https://github.com/trax-project/trax2-framework/tree/2.0.1"
+                "source": "https://github.com/trax-project/trax2-framework/tree/2.0.2"
             },
-            "time": "2022-02-22T13:12:58+00:00"
+            "time": "2022-06-01T07:57:35+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
