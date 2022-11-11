@@ -89,8 +89,10 @@ Check this post for further details: https://laracasts.com/discuss/channels/lara
 If you are not sure how to configure this, you can use the following commands **FOR TESTING PURPOSE ONLY**.
 
 ```
-chmod -R 777 bootstrap/cache
-chmod -R 777 storage
+chmod -R 775 bootstrap/cache
+chmod -R 775 storage
+find bootstrap/cache -type f -exec chmod 644 {} \;
+find storage -type f -exec chmod 644 {} \;
 ```
 
 ### Web Server
