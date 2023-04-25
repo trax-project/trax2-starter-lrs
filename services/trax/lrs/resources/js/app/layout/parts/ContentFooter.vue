@@ -1,7 +1,7 @@
 <template>
     <footer class="footer">
         <div class="container-fluid text-center text-white">
-            <brand-footer></brand-footer>
+            <brand-footer :show-version="true"></brand-footer>
         </div>
     </footer>
 </template>
