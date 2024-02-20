@@ -1,0 +1,196 @@
+// Navbar
+
+// Ensure a min height for right icons.
+.navbar-nav {
+    min-height: 46px;
+}
+// Anim on topbar icons.
+.navbar-transparent .navbar-nav .nav-item i {
+    transition: all 0.3s;
+}
+.navbar-transparent .navbar-nav .nav-item i:hover {
+    color: #e14eca;
+}
+// Hover effect on right menu.
+.navbar.bg-white .navbar-nav a.nav-link:hover,
+.navbar.bg-white .navbar-nav a.nav-link:hover p {
+    font-weight: 400;
+}
+// More top space on right menu.
+.navbar.bg-white .navbar-nav {
+    margin-top: 10px;
+}
+
+
+// Sidebar
+
+// Page top border.
+.main-panel {
+    border-top: 2px solid #0098f0;
+}
+// Sidebar background.
+.off-canvas-sidebar[data=green], .sidebar[data=green] {
+    background: #0098f0;
+    background: -webkit-gradient(linear,left bottom,left top,from(#00f2c3),to(#0098f0));
+    background: linear-gradient(0deg,#00f2c3,#0098f0);
+}
+// Logo and product title.
+.sidebar .logo {
+    padding-left: 1.5rem;
+}
+.sidebar .logo-mini {
+    margin-left: 0 !important;
+}
+.sidebar .logo a.logo-mini .logo-img img, 
+.off-canvas-sidebar .logo a.logo-mini .logo-img img {
+    max-width: 100%;
+}
+.sidebar .logo-normal {
+    font-size: 1.1rem !important;
+}
+
+
+// Modals
+
+.modal-backdrop.show {
+    opacity: 1;
+}
+.modal label {
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+}
+
+
+// Tables
+
+.table-hover tbody tr:hover {
+    background-color: rgba(34, 42, 66, .075);
+    background-color: rgba(255, 255, 255, .04);
+}
+table small {
+    letter-spacing: 0.05em;
+    color: #bbb;
+    font-size: 0.75rem;
+}
+table small.spaced {
+    letter-spacing: 0.1em;
+}
+table button .tim-icons {
+    font-size: 1.2rem !important;
+    font-weight: 400;
+}
+
+
+// Forms
+
+form h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+form label {
+    color: hsla(0,0%,100%,.6);
+}
+
+// Select
+
+.select-primary.el-select .el-input input {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+// Cards
+
+.card .card-body {
+    font-size: 0.9rem;
+}
+.card.spaced .card-body {
+    padding: 20px 30px 30px 30px;
+}
+.card.spaced .card-body h2 {
+    margin-top: 10px;
+}
+
+
+// Colors
+
+.text-info-light {
+    color: #62b1ff;
+}
+
+
+// Typography
+
+.typo h1 { 
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+    font-size: 2rem;
+    color: #fff;
+}
+.typo h2 {
+    text-transform: uppercase;
+    margin: 30px 0 15px 0;
+    font-size: 1.2rem;
+}
+.typo p, .typo li, .typo td {
+    letter-spacing: 0.03em;
+}
+.typo p {
+    color: rgba(255, 255, 255, 0.5) !important;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+.typo li {
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+.typo strong {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+.typo ol {
+    counter-reset: olcount;
+    padding-left: 0;
+}
+.typo ul {
+    padding-left: 0;
+}
+.typo ol li {
+    list-style-type: none;
+    counter-increment: olcount;
+}
+.typo ul li {
+    list-style-type: none;
+}
+.typo ol li:before {
+    content: counter(olcount)".";
+    margin-right: 10px;
+    color: #ff8d72;		
+}
+.typo ul li:before {
+    content: "•";
+    margin-right: 10px;
+    color: #ff8d72;		
+}
+.typo .table td {
+    font-weight: 300;
+}
+.typo pre {
+    font-size: 0.9rem;
+    display: inline;
+    background-color: #525f7f;
+    padding: 0.1rem 0.3rem;
+    margin: 0 0.1rem;
+}
+
+// Issue on active nav links.
+
+a.nav-link, .nav-link:focus {
+    color: #525f7f;
+}
+.nav-link:hover {
+    color: #e14eca !important;
+}

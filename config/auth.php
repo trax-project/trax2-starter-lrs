@@ -62,7 +62,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => Trax\Auth\Stores\Users\User::class,
         ],
 
         // 'users' => [
@@ -93,7 +93,7 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
-            'table' => 'password_reset_tokens',
+            'table' => 'trax_password_resets',
             'expire' => 60,
             'throttle' => 60,
         ],

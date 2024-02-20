@@ -1,66 +1,205 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# TRAX LRS 2.1 - Starter Edition
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+## About TRAX LRS
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+TRAX LRS is an xAPI conformant Learning Record Store (LRS) built with Laravel.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+It focuses on the core features of an LRS, and that's it!
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+We want to keep it simple and clean, and give you the freedom to build what you want around it.
 
-## Learning Laravel
+Fore further information, visit http://traxlrs.com
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Sofware License & Copyright
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+TRAX LRS **Starter Edition** is distributed under the [GNU-GPL3 license](https://www.gnu.org/licenses/gpl-3.0.fr.html).
 
-## Laravel Sponsors
+Copyright 2022-2024 Sébastien Fraysse, http://fraysse.eu, sebastien@fraysse.eu.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
+## Server Requirements
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### Apache 2.4
 
-## Contributing
+- mod_rewrite
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### PHP 8.1 to 8.3
 
-## Code of Conduct
+Check that your PHP version and configuration is valid both for PHP Web & CLI.
+The following extensions are required:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- Ctype
+- cURL
+- DOM
+- Fileinfo
+- Filter
+- Hash
+- Mbstring
+- OpenSSL
+- PCRE
+- PDO (PDO_MYSQL / PDO_PGSQL)
+- Session
+- Tokenizer
+- XML
 
-## Security Vulnerabilities
+### Database
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- MySQL 5.7.7+
+- MariaDB 10.10+
+- PostgreSQL 12+
 
-## License
+### Utilities
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Git
+- Composer 2
+
+
+## Upgrade from TRAX LRS 2.0.x
+
+In order to upgrade TRAX LRS from version 2.0.x, we recommend to install the last release of TRAX LRS
+in a different location and then, to make a copy the `.env` file from your previous installation.
+
+
+## Fresh install
+
+### First Steps
+
+Assuming that you want to install TRAX LRS in a folder named **traxlrs**:
+
+```
+git clone https://github.com/trax-project/trax2-starter-lrs traxlrs
+cd traxlrs
+composer install
+```
+
+### File Permissions
+
+The folders `storage` and `bootstrap/cache` must be writable both by the webserver and the console user.
+Assuming that the ownership has been properly set, you should be able to assign a `0775` permission
+to the folders and subfolders and a `644` permission to the files.
+Check this post for further details: https://laracasts.com/discuss/channels/laravel/proper-folder-permissions
+
+If you are not sure how to configure this, you can use the following commands **FOR TESTING PURPOSE ONLY**.
+
+```
+chmod -R 777 bootstrap/cache
+chmod -R 777 storage
+```
+
+### Web Server
+
+For security reasons, only the `public` folder should be accessible by the web server.
+Create a virtual host and configure the document root to `traxlrs/public`.
+
+
+### Database
+
+Create an empty database with the `utf8mb4_unicode_ci` encoding.
+Then, at the root of the application folder, make a copy of the `.env.example` file,
+rename it `.env` and enter your database settings.
+
+*MySQL/MariaDB example:*
+
+```ini
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=traxlrs
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+*PostgreSQL example:*
+
+```ini
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=traxlrs
+DB_USERNAME=postgres
+DB_PASSWORD=aaaaaa
+```
+
+### App URL
+
+In the `.env` file, you must set the public URL of your TRAX LRS application :
+
+```ini
+APP_URL=http://traxlrs.test
+```
+
+### Last Steps
+
+```
+php artisan key:generate
+php artisan migrate
+```
+
+
+## Admin Account
+
+You can now create an admin account with the following command.
+This will give your credentials to log into the application.
+
+```
+php artisan admin:create
+```
+
+Additional commands are available to manage the admin accounts:
+
+```powershell
+php artisan admin:list
+php artisan admin:update
+php artisan admin:delete
+```
+
+
+## Production server
+
+In the `.env` file, changes settings from:
+
+```ini
+APP_ENV=local
+APP_DEBUG=true
+```
+
+To:
+
+```ini
+APP_ENV=production
+APP_DEBUG=false
+```
+
+To optimize performances, you can run the following commands.
+
+```powershell
+php artisan config:cache
+php artisan route:cache
+```
+
+The `php artisan config:cache` command must be ran again after each config change.
+
+
+
+## Known issues
+
+### SQLSTATE[42000]: Syntax error or access violation: 1071
+
+If you get this error during the `php artisan migrate` command, check your version of MySQL or MariaDB.
+Since TRAX LRS 2.0.2, MySQL versions older than 5.7.7 are not supported anymore.
+MariaDB versions older than 10.3 are not supported.
+
+### 404 error on the main page
+
+TRAX LRS has a `/public/.htaccess` file with some Apache directives.
+When these directives are ignored by Apache, this leads to a 404 error.
+In this case, check the `httpd.conf` file of Apache and try to set the `AllowOverride` option to `All`:
+
+```xml
+<Directory "path/to/laravel/project/public">
+    Allowoverride All
+</Directory>
+```
+

@@ -168,6 +168,13 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        Trax\Core\TraxCoreServiceProvider::class,
+        Trax\Auth\AuthServiceProvider::class,
+        Trax\XapiValidation\XapiValidationServiceProvider::class,
+        Trax\XapiStore\XapiStoreServiceProvider::class,
+        Trax\Lrs\LrsServiceProvider::class,
+    
     ])->toArray(),
 
     /*
@@ -182,7 +189,13 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        // 'Example' => App\Facades\Example::class,
+
+        'TraxRouting' => Trax\Auth\TraxRouting::class,
+        'TraxAuth' => Trax\Auth\TraxAuth::class,
+
     ])->toArray(),
+
+    
+    'secure' => env('APP_SECURE', null),
 
 ];
