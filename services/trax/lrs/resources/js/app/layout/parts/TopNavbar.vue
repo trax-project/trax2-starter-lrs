@@ -17,7 +17,7 @@
                 </div>
                 <div class="navbar-brand">
                     <span style="font-size:1.2rem">TRAX LRS</span>
-                    <span style="font-size:0.8rem" class="text-primary">2.0</span>
+                    <span style="font-size:0.8rem" class="text-primary">2.1</span>
                 </div>
             </div>
 
